@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>TutorialArrays</title>
+<author>Alejandro Gutierrez Lozano</author>
+<script type="text/javascript">
+function addClass(elem, string) {
+	var c = elem.className.split(' ');
+  for(c , i = c.length-1; i>=0; i--) {
+    if (c[i] == string) return;
+  }
+  elem.className += ' '+string;
+}
+var obj = { className: 'open menu' }
+addClass(obj, 'new');
+addClass(obj, 'open');
+console.log(obj.className);   // open menu new
+</script>
+</head>
+
+<body>
+
+<h1>Ejercicio4</h1>
+
+	<p>
+	An object has a className property which keeps it’s class names delimited by spaces:<br/>
+var obj = {<br/>
+  className: 'open menu'<br/>
+}<br/>
+Write a function addClass(obj, cls) which adds a class cls, but only if it doesn’t yet exist:<br/>
+addClass(obj, 'new') // obj.className='open menu new'<br/>
+addClass(obj, 'open')  // no changes (class already exists)<br/>
+addClass(obj, 'me') // obj.className='open menu new me'<br/>
+alert(obj.className)  // "open menu new me"
+
+</p>
+<p id="contenido">
+
+</p>
+
+<h1><strong><noscript>No tienes javascript :(</noscript></strong></h1>
+</body>
+</html>

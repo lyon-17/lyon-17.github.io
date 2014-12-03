@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>TutorialArrays</title>
+<author>Alejandro Gutierrez Lozano</author>
+<script type="text/javascript">
+
+var arr = ['a','b'];
+arr.push(
+	function(){
+		alert(this)
+	}
+	);
+arr[arr.length-1];
+</script>
+</head>
+
+<body>
+
+<h1>Ejercicio7</h1>
+
+What will be the result? Why?<br/>
+
+arr = ["a", "b"]<br/>
+arr.push( function() { alert(this) } )<br/>
+arr[arr.length-1]()  // ?<br/>
+
+
+</p>
+<p id="contenido">
+El resultado será la función definida anteriormente.<br/>
+Porque es lo último que ha sido introducido.
+</p>
+
+<h1><strong><noscript>No tienes javascript :(</noscript></strong></h1>
+</body>
+</html>

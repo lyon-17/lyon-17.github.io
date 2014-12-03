@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>TutorialArrays</title>
+<author>Alejandro Gutierrez Lozano</author>
+<script type="text/javascript">
+
+var cadena = "hello-world!";
+
+function camelize(string) {
+	var cadenaFor = string.toString();
+	var cadena = [];
+	for (var i = 0; i < cadenaFor.length; i++) {
+		if(cadenaFor.charAt(i)==="-"){
+			cadena.push("");
+		}
+		else if(cadenaFor.charAt(i-1)==="-"){
+			cadena.push(cadenaFor.charAt(i).toUpperCase());
+		}
+		else{
+		cadena.push(cadenaFor.charAt(i));
+		}
+	}
+	return cadena.join("");
+}
+
+var nuevaCadena = camelize(cadena);
+
+console.log(cadena);
+console.log(nuevaCadena);
+
+</script>
+</head>
+
+<body>
+
+<h1>Ejercicio6</h1>
+
+	<p>
+	Create a function camelize(str) which transforms a string from “my-short-string” to “myShortString”.<br/>
+
+So, all parts after a hyphen become camelcased instead. For instance:<br/>
+
+camelize("background-color") == 'backgroundColor'<br/>
+camelize("list-style-image") == 'listStyleImage'<br/>
+Such function may be useful when operating with CSS.<br/>
+
+Note. Remember charAt, substr and check str.toUpperCase() function which transforms the string to upper case.<br/>
+
+</p>
+<p id="contenido">
+Oen the console to show the results
+</p>
+
+<h1><strong><noscript>No tienes javascript :(</noscript></strong></h1>
+</body>
+</html>

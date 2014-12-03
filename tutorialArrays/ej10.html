@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>TutorialArrays</title>
+<author>Alejandro Gutierrez Lozano</author>
+<script type="text/javascript">
+var john = { name: 'John Smith', age: 23};
+var mary = { name: 'Mary Key', age: 18};
+var bob = {name: 'Bob-small', age: 6};
+var people = [john,mary,bob];
+
+function ageSort(people){
+	people.sort(function (a, b) {
+  if (a.age > b.age) {
+    return 1;
+  }
+  if (a.age < b.age) {
+    return -1;
+  }
+  // a must be equal to b
+  return 0;
+});
+}
+ageSort(people);
+console.log(people);
+</script>
+</head>
+
+<body>
+
+<h1>Ejercicio10</h1>
+
+<p>
+Create a function ageSort(people) to sort array of people objects by their age.<br/>
+var john = { name: "John Smith", age: 23 }<br/>
+var mary = { name: "Mary Key", age: 18 }<br/>
+var bob = { name: "Bob-small", age: 6 }<br/>
+var people = [ john, mary, bob ]<br/>
+ageSort(people) // now people is [ bob, mary, john ]<br/>
+Output people names after sorting.<br/>
+ageSort(people) // now people is [ bob, mary, john ]
+</p>
+<p id="contenido">
+
+</p>
+
+<h1><strong><noscript>No tienes javascript :(</noscript></strong></h1>
+</body>
+</html>
