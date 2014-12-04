@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<svg width="17" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <defs>
+  <symbol id="svg_8" height="480" width="640" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg">
+   <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+   <g stroke="null">
+    <title>Layer 1</title>
+    <rect fill="none" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="2.656273" y="2.437459" width="63.279516" height="94.572918" id="svg_7" stroke="#000000"/>
+    <rect fill="none" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="16.578148" y="1.593709" width="0" height="0.421875" id="svg_6" stroke="#000000"/>
+    <rect fill="none" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="8.000016" y="7.874995" width="52.541665" height="31.75" id="svg_5" stroke="#000000"/>
+    <rect fill="none" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="53" y="49.5" width="5" id="svg_4" height="0.5" stroke="#000000"/>
+    <rect fill="none" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="26.25" y="83.75" width="7" height="2" stroke="#000000" id="svg_3"/>
+    <rect fill="none" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="40.75" y="55.5" width="5" height="0.5" stroke="#000000" id="svg_2"/>
+    <rect fill="none" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="44.75" y="83.25" width="7" height="2" stroke="#000000" id="svg_1"/>
+   </g>
+  </symbol>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <use x="0" y="0" transform="matrix(0.25,0,0,0.25,0,0) " xlink:href="#svg_8" id="svg_9"/>
+ </g>
+</svg>

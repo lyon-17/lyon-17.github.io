@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/canvas.js"></script>
+		<meta charset="UTF-8">
+		<title>Alejandro Gutierrez Lozano</title>
+	</head>
+	<body>
+	<div id="contenido" itempscope itemtype="http://www.data-vocabulary.org/Person">
+		<header>
+			<canvas id="canvasTitulo" width="90" height="90"></canvas><h1>Games for all</h1>
+		</header>
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">
+						<div id="fotosvg">
+							<object data="img/second.svg" type="image/svg+xml"></object> <!-- Svg edit -->
+						</div>
+						Principal
+					</a>
+					<a href="">
+						<div id="fotosvg">
+							<object data="img/second.svg" type="image/svg+xml"></object> <!-- Svg edit -->
+						</div>
+						Índice
+					</a>
+					<a href="formulario.html">
+						<div id="fotosvg">
+							<object data="img/second.svg" type="image/svg+xml"></object> <!-- Svg edit -->
+						</div>
+						Contacto
+					</a>
+					<a href="">
+						<div id="fotosvg">
+							<object data="img/second.svg" type="image/svg+xml"></object> <!-- Svg edit -->
+						</div>
+					Sobre mí
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<aside>
+			<section>
+				<h4>Blog personal de <span itemprop="name">Alejandro</span></h4><span itemprop="foto"><div id="fotoPersonal"></div></span><h5>24 años <span itemprop="title">programador web</span></h5>
+			</section>
+			<section>
+				<p>Relacionado...<br/>
+					<a href="http://www.gamefaqs.com/">La mejor pagina de guias</a><br/>
+					<a href="http://www.guiasnintendo.com/">Pagina oficial de guias de Nintendo</a><br/>
+					<a href="http://vsrecommendedgames.wikia.com/wiki//v/%27s_Recommended_Games_Wiki">Pagina de recomendaciones</a><br/>
+					<a href="http://www.metacritic.com/game">Pagina general de puntuaciones</a>
+				</p>
+			</section>
+		</aside>
+		<main>
+			<section>
+				<form method="post">
+					<fieldset>
+						<legend>datos personales</legend>
+							<label>Nombre:</label> <input type="text" name="nombre" required>(*)<br/>
+							<label>Apellidos:</label> <input type="text" name="apellidos" required>(*)<br/>
+							<label>fecha de nacimiento:</label> <input type="date" name="fecha" required>(*)<br/>
+							<label>Sexo:</label> 
+								<span> Hombre:</span><input type="radio" value="hombre" name="sexo" checked="checked">
+								<span> Mujer:</span><input type="radio" value="mujer" name="sexo">
+								(*)
+								<br/>
+							<label>Pagina web</label><input type="text" placeholder="ejemplo@user.com"><br/>
+							<input type="checkbox" required><label>He leido las condiciones de uso y estoy de acuerdo</label> (*)
+					</fieldset>
+					<input type="submit" value="enviar">
+				</form>
+			</section>
+		</main>
+	</div>
+	<footer>
+		<p>Realizado por Alejandro Gutierrez Lozano</p>
+	</footer>
+	</body>
+</html>
