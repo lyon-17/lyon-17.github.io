@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>Lista</title>
+	<author>Alejandro Gutierrez Lozano</author>
+<style type="text/css">
+	ol {
+	 display: none;
+	 }
+</style>
+	</script>
+	<script type="text/javascript">
+	function verLista () {
+		var lista = document.getElementById('lista')
+		lista.style.display = 'block';
+	}
+	</script>
+</head>
+
+<body>
+	<p>
+		<a href="#" onclick=window.parent.frames[1].location="teoria.html">Teoria de arrays</a><br/>
+		<a href="#" onclick=verLista();>Lista de ejercicios</a><br/>
+		<ol id="lista">
+		<li><a href="#" onclick=window.parent.frames[1].location="notas.html">notas</a></li>
+		<li><a href="#" onclick=window.parent.frames[1].location="matriz.html">matriz</a></li>
+		<li><a href="#" onclick=window.parent.frames[1].location="secuencia.html">secuencia</a></li>
+		</ol>
+
+
+	</p>
+</body>
+</html>
