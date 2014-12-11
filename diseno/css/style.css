@@ -277,14 +277,29 @@ form{
 	text-align: left;
 }
 
+label {
+		display: inline-block;
+		margin-top: 5px;
+		width: 175px;
+		vertical-align:top;
+	}
 input{
-	background-color: #5D2D4E;
-	color: #05A1AD;
-	margin: 5px;
-}
+	margin-top: 5px;
+	width: 150px;
+	}
 
 input[type=text][required]{
 	box-shadow: 2px 2px 2px green;
+}
+
+input[type=checkbox]{
+	padding-left: 5px;
+	width: 10px;
+}
+
+input[type=radio]{
+	margin: 0px 10px 0px 5px;
+	width: 10px;
 }
 
 :invalid{
