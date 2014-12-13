@@ -1,0 +1,29 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 18</title>
+	<author>Alejandro Gutierrez Lozano</author>
+	<link rel="stylesheet" type="text/css" href="css/calendar.css">
+	<script type="text/javascript" src="js/calendar.js" ></script>
+	<script type="text/javascript" src="js/calendar-es.js" ></script>
+	<script type="text/javascript" src="js/calendar-setup.js" ></script>
+</head>
+</head>
+<body>
+	<h1>Calendario</h1>
+	<p></p>
+<input type="text" name="date" id="fecha" readonly="readonly" />
+<img src="img.gif" id="selector" />
+<script type="text/javascript">
+window.onload = function() {
+  Calendar.setup({
+    inputField: "fecha",
+    ifFormat:   "%d / %m / %Y",
+    button:     "selector",
+    weekNumbers: false,
+  });
+}
+</script>
+<a href="../index.html">volver</a>
+</body>
+</html>

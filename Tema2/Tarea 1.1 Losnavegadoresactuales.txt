@@ -1,0 +1,48 @@
+﻿1. Instala las últimas versiones de los siguientes navegadores: Internet Explorer, Mozilla Firefox, Google Chrome, Safari y Opera. Indica cuáles son dichas versiones.
+
+Internet explorer: 9.0.8112.16421
+Mozilla firefox: 31.0
+Google chrone: 37.0.2062.120 m
+Safari: 5.1.7
+Opera: 24.0.1558.61
+
+
+2. Indica la página de desarrolladores de cada uno de los navegadores anteriores. Busca en ellos información sobre JavaScript
+
+Internet explorer: MSDN.microsoft.com 
+Mozilla firefox: MDM https://developer.mozilla.org/es/
+Google chrone: developers.google.com
+Safari: developer.apple.com
+Opera: https://dev.opera.com/
+
+
+3. Rhino y SpiderMonkey: qué son
+
+Son dos interpretes de javascript. Rhino fue creado por mozilla, es de codigo abierto y desarrollado en Java.
+SpiderMonkey fue el primer interprete creado y usado en netscape, actualmente es usado por el navegador de firefox.
+
+
+4. V8 JavaScript: qué es
+
+Es un interprete de javascript, que usa google y opera, es de codigo abierto y esta desarrollado por goggle.
+
+
+5. Con respecto a los navegadores IE, Chrome y Firefox:
+   1. Indica cómo se abre la consola JavaScript en cada uno de los navegadores anteriores. Ejecuta en ellos las siguientes sentencias: var a = 2 + 3; console.log(a)
+   2. Indica cómo se abre el depurador en cada uno de los navegadores anteriores. 
+   3. Averigua una guía de uso del depurador de cada uno de ellos.
+1.
+Chrone: F12 o herramientas->consola javascript.
+Explorer: F12 o en el menu Herramientas de desarrollo
+Firefox: F12 o developer->web console
+2.
+Chrone : F12 -> sources
+explorer: F12 -> script
+Firefox: F12 -> debbuger
+3.
+
+
+
+6. SunSpider, V8 Benchmark Suite, Octane. Averigua qué son y utilízalas.
+
+Son paginas que indican a que velocidad funciona distintos parametros de javascript en el navegador.
