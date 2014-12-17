@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>Alejandro Gutierrez Lozano</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href=""><div id="fotoAdd"></div></a></li>
+				<li><a href=""><div id="fotoRemove"></div></a></li>
+				<li><div id="lupa"></div><input type="text" placeholder="buscar">
+			</ul>
+		</nav>
+		<div id="contenido">
+					<form method="post" action="index.html">
+					<fieldset>
+					<legend>Datos tarea</legend>
+						<label>Nombre tarea:</label>
+						<input type="text" id="nombre" placeholder="nombre tarea" required>(*)
+						<label>Fecha de finalizacion:</label>
+						<input type="date" id="fecha" required>(*)
+						<label>Descripcion</label>
+						<textarea id="descripcion" rows="4"></textarea>
+					</fieldset>
+					<fieldset>
+						<legend>Etiquetas</legend>
+						<input type="text" id="etiqueta" placeholder="añade etiquetas" required>
+						<input type="button" id="addEtiqueta" value="Añadir">
+					</fieldset>
+					<fieldset>
+						<legend>Subtareas</legend>
+						<input type="text" id="subtarea1" placeholder="subtarea">
+						<input type="button" id="addSubtareas" value="Añadir">
+					</fieldset>
+						<input type="submit" value="Añadir tarea">
+						<a href="index.html"><input type="button" value="Volver"></a>
+					</form>
+		</div>
+	</body>
+</html>

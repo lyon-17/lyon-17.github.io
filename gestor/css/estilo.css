@@ -1,0 +1,347 @@
+/*Fuentes */
+
+@font-face{
+	font-family: regular;
+	src: url(../fonts/OpenSans-Regular.ttf) format('truetype');
+}
+
+/* Cuerpo */
+
+@-webkit-keyframes invalid{
+	0%{color: red;}
+	50%{color: black;}
+	100%{color: red;}
+}
+
+article{
+	border-radius: 5px;
+	padding: 10px;
+	margin: 2px 5px 5px 5px;
+	*text-align: right;
+}
+
+article a{
+	text-decoration: none;
+}
+
+article p{
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
+
+article:hover{
+	background-color: rgba(0,0,255,0.5);
+}
+
+body{
+	font-family: regular;
+	margin: 0 auto;
+}
+
+#campoPersona{
+	background-color: rgba(0,0,0,0.7);
+	width: 100%;
+	display: inline-block;
+	color: white;
+}
+
+#campoPersona h1{
+	display: inline-block;
+	font-size: 26px;
+	margin-top: 10px;
+	vertical-align: top;
+}
+
+#contenido{
+	background-color: rgba(0,0,0,0.3);
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	min-height: 600px;
+}
+
+#fechasTareas{
+	margin-right: 5px;
+	text-align: right;
+}
+
+
+/* Fotos */
+#fotoAdd{
+	background-image: url(../img/fotoAdd.png);
+	background-size: 100% 100%;
+	height: 15px;
+	width: 15px;
+}
+
+#fotoCompleted{
+	background-image: url(../img/fotoComplete.png);
+	background-size: 100% 100%;
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+}
+
+#fotoDue{
+	background-image: url(../img/fotoCalendar.png);
+	background-size: 100% 100%;
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+}
+
+#fotoLate{
+	background-image: url(../img/fotoLate.png);
+	background-size: 100% 100%;
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+}
+
+#fotoCompletedB{
+	background-image: url(../img/check.png);
+	background-size: 100% 100%;
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+}
+
+#fotoPersona{
+	background-image: url(../img/fotoPersona.jpg);
+	background-size: 100% 100%;
+	border-radius: 10px 10px 10px 10px;
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 10px;
+	height: 75px;
+	width: 75px;
+}
+
+#fotoRemove{
+	background-image: url(../img/fotoRemove.png);
+	background-size: 100% 100%;
+	height: 15px;
+	width: 15px;
+}
+
+#fotoInbox{
+	background-image: url(../img/fotoInbox.png);
+	background-size: 100% 100%;
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+}
+
+#fotoTareas{
+	background-image: url(../img/fotoFichero.png);
+	background-size: 100% 100%;
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+}
+
+/*Fin fotos*/
+
+footer{
+	border-bottom: 1px solid black;
+	text-align: center;
+}
+
+#filtros>a{
+	color: black;
+	margin-left: 5px;
+	padding-left: 10px;
+	text-decoration: none;
+}
+
+#filtros ul li{
+	list-style: none;
+	padding-left: 10px;
+	padding-right: 20px;
+}
+
+#filtros ul li a{
+	color: rgba(0,0,0,0.8);
+	margin-left: 5px;
+	text-decoration: none;
+}
+#filtros ul li:hover{
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: rgba(0,0,255,0.6);
+}
+
+#lupa{
+	background-image: url(../img/fotoLupa.png);
+	background-size: 100% 100%;
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+}
+
+p{
+	margin: 7px 5px 3px 0px;
+}
+
+nav{
+	background-color: rgba(0,0,0,0.3);
+}
+
+nav ul{
+	display: inline-block;
+	margin: 5px;
+	transform:translate(350px, 0px);
+}
+
+nav ul li{
+	display: inline-block;
+}
+nav ul li input{
+	width: 180px;
+}
+
+section{
+	display: inline-block;
+	min-height: 600px;
+	vertical-align: top;
+	width: 30%;
+}
+
+section:nth-child(1){
+	background-color: rgba(0,0,0,0.2);
+	width: 20%;
+}
+
+section:nth-child(2){
+	border-right: 1px solid gray;
+	width: 40%;
+}
+
+section h3 + article{
+	background-color: rgba(0,0,255,0.5);
+}
+
+section>a{
+	color: black;
+	margin-left: 5px;
+	padding-left: 10px;
+	text-decoration: none;
+}
+
+section ul{
+	padding-left: 10px;
+}
+
+section ul li{
+	list-style: none;
+}
+
+section ul li a{
+	text-decoration: none;
+	color: black;
+}
+
+section h2 a{
+	color: black;
+	text-decoration: none;
+}
+
+section:nth-child(3){
+	padding: 0px 5px 0px 5px;
+}
+
+#tarea{
+	margin: 5px 5px 5px 0px;
+	padding: 5px 5px 5px 5px;
+}
+
+#tarea h2{
+	font-size: 24px;
+}
+
+#tituloTareas{
+	position: absolute;
+}
+
+
+/*h1,h2,h3...*/
+
+h1{
+	font-size: 22px;
+	margin: 4px;
+}
+
+h2{
+	border-bottom: 1px solid gray;
+	font-size: 16px;
+	font-weight: 100px;
+	margin: 10px 5px 5px 5px;
+	padding-left: 10px;
+}
+
+h3{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+h4{
+	display: inline-block;
+	margin-top: 5px;
+	margin-bottom: 5px; 
+}
+
+h5{
+	font-family: regular;
+	font-size: 16px;
+	margin-top: 4px;
+	margin-bottom: 3px;
+}
+
+/*Estilo formulario*/
+
+form{
+	margin-top: 5px;
+	display: inline-block;
+	width: 30%;
+}
+
+fieldset{
+	border-radius: 10px 5px 10px 5px;
+	border-color: rgba(0,0,0,0.5);
+	display: inline-block;
+	margin: 5px 3px;
+	min-width: 400px;
+}
+
+label {
+	display: inline-block;
+	margin-top: 5px;
+	min-width: 175px;
+	vertical-align:top;
+}
+
+legend{
+	font-size: 20px;
+}
+
+input{
+	margin-top: 5px;
+	min-width: 200px;
+	text-align: center;
+}
+
+textarea{
+	margin-top: 5px;
+	min-width: 200px;
+}
+
+a{
+	color: black;
+}
+
+:invalid{
+	-webkit-animation: invalid 3s ease infinite;
+}
+
+:required{
+	border: 1px solid green;
+}
