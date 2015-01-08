@@ -2,7 +2,26 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <title>Lista de coches</title>
-<author>Alejandro Gutierrez Lozano</author>
+<style type="text/css">
+
+body{
+	font-family: arial;
+	font-size: 14px;
+	line-height: 20px;
+}
+table{
+	border-collapse: collapse;
+}
+
+table tr:nth-child(1){
+	font-weight: 700;
+}
+table tr td{
+	padding: 5px;
+	height: 20px;
+	width: 125px;
+}
+</style>
 <script type="text/javascript" src="coches.js">
 </script>
 </head>
@@ -10,10 +29,8 @@
 <body>
 
 <h1>Lista de coches</h1>
-<p>
-Objetos coche</p>
-Genera cuatro instancias del objeto Coche (propiedades marca, modelo y año)</p>
-Imprime sus propiedades en una tabla HTML. Genera el código desde JavaScript.<br/>Cada instancia ha de ocupar una línea y el valor de cada propiedad ha de ocupar una celda.
+<p>Genera cuatro instancias del objeto Coche (propiedades marca, modelo y año)<br/>
+Imprime sus propiedades en una tabla HTML, genera el código desde JavaScript.<br/>Cada instancia ha de ocupar una línea y el valor de cada propiedad ha de ocupar una celda.
 </p>
 <p id="contenido">
 

@@ -84,6 +84,28 @@ function Matriz(filas,columnas){
 		mostrarResultado(matrizResta);
 	}
 
+	Matriz.prototype.multiplicar = function (matriz2) {
+    var i, j, k, nuevaMatriz;
+    console.log(matriz.getColumnas());
+    console.log(matriz2.getFilas());
+    if(matriz.getColumnas() !== matriz2.getFilas())
+    	return null;
+    nuevaMatriz = new Matriz(matriz.getColumnas(), matriz2.getFilas());
+    nuevaMatriz = new Matriz(2,2);
+    console.log(nuevaMatriz);
+    for (i = 0; i < nuevaMatriz.getFilas() ; i++) {
+        for (j = 0; j < nuevaMatriz.getColumnas() ; j++) {
+            nuevaMatriz[i] = [];
+        for (k = 0; k < matriz.getColumnas() ; k++) {
+        	console.log(matriz[i][k]*matriz2[k][j]);
+				nuevaMatriz[i][j] += matriz[i][k] * matriz2[k][j];
+            }
+            console.log("new row");
+        }
+    }
+    mostrarResultado(nuevaMatriz);
+	};	    
+
 //End of prototype array
 
 	var matriz,matriz2,row,col,row2,col2,contenido;
@@ -113,14 +135,14 @@ function crearMatriz () {
 	for (var i = 0 ; i < row;  i++) {
 		matriz[i] = [];
 		for ( var j = 0 ; j < col; j++) {
-			matriz[i][j] = Math.round(Math.random()*100);
+			matriz[i][j] = Math.round(Math.random()*10);
 		}
 	}
 	//create the second matrix
-	for (var i = 0 ; i < row;  i++) {
+	for (var i = 0 ; i < row2;  i++) {
 		matriz2[i] = [];
-		for ( var j = 0 ; j < col; j++) {
-			matriz2[i][j] = Math.round(Math.random()*100);
+		for ( var j = 0 ; j < col2; j++) {
+			matriz2[i][j] = Math.round(Math.random()*10);
 		}
 	}
 	//show the first matrix
@@ -204,4 +226,12 @@ function trasponerMatriz2(){
 		return;
 	}
 	mostrarTraspuesta(matriz2);
+}
+
+function multiplicarMatrices(){
+	if (matriz === undefined){
+		contenido.innerHTML = ('Debes crear la matriz');
+		return;
+	}
+	matriz.multiplicar(matriz2);
 }

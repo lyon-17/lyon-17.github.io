@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Alejandro Gutierrez Lozano</title>
+		<script type="text/javascript" src="js/formulario.js">
+		</script>
+
+		<style type="text/css">
+
+	label {
+		display: inline-block;
+		margin-top: 18px;
+		width: 150px;
+		vertical-align:top;
+	}
+
+	input{
+		margin-top: 10px;
+		width: 150px;
+	}
+
+	input[type="radio"]{
+		width: 20px;
+		margin-right: 5px;
+	}
+	input[type="checkbox"]{
+		width: 20px;
+		margin-top: 20px;
+		margin-right: 5px;
+	}
+
+	p{
+		display: inline-block;
+		padding-left: 5px;
+		margin: 0;
+	}
+
+	#grupoSexo{
+		display: inline-block;
+		margin-top: 10px;
+	}
+
+	#condicionesErroneo{
+		color: red;
+	}
+
+	#sexoErroneo{
+		padding-left: 67px;
+	}
+
+
+		</style>
+	</head>
+	<body>
+	<h1>Formulario</h1>
+		<form action="hecho.html" method="post" id="datos">
+
+			<label>Nombre(*)</label>
+			<input type="text" id="nombre" class="required"><p id="nombreErroneo"></p><br/>
+
+			<label>Apellidos</label>
+			<input type="text" id="apellidos"><p id="apellidosErroneo"></p><br/>
+
+			<label>Fecha de nacimiento(*)</label>
+			<input type="text" id="fecha" placeholder="dd/mm/yyyy" class="required"><p id="fechaErroneo"></p><br/>
+
+			<label>DNI(*)</label>
+			<input type="text" id="dni" class="required"><p id="DNIErroneo"></p></br>
+
+			<label>Email(*)</label>
+			<input type="text" id="email"><p id="emailErroneo"></p><br/>
+
+			<label>Sexo</label>
+			<div id="grupoSexo">
+			M<input type="radio" value="M" name="sexo" checked>
+			F<input type="radio" value="F" name="sexo"></div><p id="sexoErroneo"></p><br/>
+
+			<label>Telefono</label>
+			<input type="number" id="tel"><p id="telefonoErroneo"></p><br/>
+
+			<label>Numero de cuenta</label>
+			<input type="text" id="cuenta"><p id="cuentaErroneo"></p><br/>
+
+			<label>Condiciones de uso</label>
+			<input type="checkbox" id="aceptar">Acepto las condiciones de uso<p id="condicionesErroneo"></p><br/>
+
+			<input type="submit" value="enviar" id="enviar">
+			<input type="button" value="ver cookies" onclick="ventanaCookies()">
+		</form>
+	<p id="contenido">
+
+	</p>
+	</body>
+</html>

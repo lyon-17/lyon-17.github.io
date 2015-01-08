@@ -20,8 +20,7 @@ window.onload = function () {
 
     Gato = function (race, win) {
         this.name = this.getName();
-        this.age = new Date();
-        this.age.setFullYear(this.age.getFullYear() - Math.round(Math.random() * 7));
+        this.age = buscarEdad();
         this.race = race;
         this.state = 'playing';
         this.weight = 5 + Math.round(Math.random() * 4);
@@ -29,15 +28,14 @@ window.onload = function () {
     };
 
     Gato.prototype.getAge = function () {
-        var today;
-        today = new Date();
-        return (today.getFullYear() - this.age.getFullYear());
+        return this.age;
     };
 
    Gato.prototype.getName = function () {
       var name = document.getElementById('name').value;
+      var randName = ['Micaela','Junior','Crescendo','Asmodeus','Slava','Gogre','Fer','Plata'];
       if(name==="")
-            return "Micaela";
+            return randName[Math.round(Math.random()*7)];
         return name;
     };
 
@@ -84,6 +82,35 @@ window.onload = function () {
     };
 
     // Fin prototype gato
+
+    function buscarEdad(){
+        var fechaC = document.getElementById('fecha').value;
+        if(fechaC === ""){
+            randFecha = ['12/4/1998','22/7/2004','1/9/2006','3/12/2012','28/1/1997','30/6/1999'];
+            fechaC = randFecha[Math.round(Math.random()*5)];
+        }
+           
+        var fechaS = fechaC.split('/');
+        var fechaAct = new Date(); 
+        var diaAct = fechaAct.getDate();
+        var mesAct = fechaAct.getMonth();
+        var anyoAct = fechaAct.getFullYear();
+
+        var edad = anyoAct-fechaS[2];
+
+        if(fechaS[1] > mesAct){
+            edad--;
+        }
+        if(fechaS[1] == mesAct){
+                if(fecha[0] > diaAct){
+                    edad--;
+                }
+            }
+        if(fechaS[2] == anyoAct)
+        edad = 0;
+
+        return edad;
+    }
 
     function crearGato() {
         var bEat, bSleep, bPlay, cat, catWindow, race;
