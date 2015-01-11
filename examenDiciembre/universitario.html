@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Alejandro Gutierrez Lozano</title>
+		<script type="text/javascript" src="js/formulario.js">
+		</script>
+
+		<style type="text/css">
+
+body{
+	color: white;
+	background-color: rgba(0,0,0,0.3);
+	font-family: arial;
+	font-size: 12px;
+	text-align: center;
+	margin: 0 auto;
+	width: 80%;
+}
+	form{
+	border: 1px solid black;
+	background-color: rgba(0,0,0,0.7);
+	padding: 5px;
+	text-align: center;
+	transform: translate(250px, 0px);
+	width: 50%;
+	}
+
+	label {
+		display: inline-block;
+		margin-top: 18px;
+		width: 150px;
+	}
+
+	input{
+		margin-top: 10px;
+		width: 150px;
+	}
+
+	p{
+		display: inline-block;
+		padding-left: 5px;
+		margin: 0;
+	}
+
+	input[type="checkbox"]{
+		padding-left: 20px;
+		width: 50px;
+	}
+	#condiciones{
+		transform: translate(25px, 0px);
+	}
+
+	#condicionesErroneo{
+		color: red;
+	}
+
+
+		</style>
+	</head>
+	<body>
+	<h1>Alta de universitario</h1>
+		<form action="formulario.html" method="post" id="datos">
+
+			<label>Nombre(*)</label>
+			<input type="text" id="nombre" placeholder="nombre"><p id="nombreErroneo"></p><br/>
+
+			<label>Apellido</label>
+			<input type="text" id="apellido" placeholder="primer apellido"><p id="apellidoErroneo"></p><br/>
+
+			<label>Apellido2</label>
+			<input type="text" id="apellido2" placeholder="segundo apellido"><p id="apellido2Erroneo"></p><br/>
+
+			<label>Fecha de nacimiento(*)</label>
+			<input type="text" id="fecha" placeholder="dd-mm-yyyy" class="required"><p id="fechaErroneo"></p><br/>
+
+			<input type="checkbox" id="aceptar">Aceptar las condiciones<br/><p id="condicionesErroneo"></p><br/>
+
+			<input type="button" value="enviar" id="enviar" onclick="validarDatos();">
+			<input type="reset" value="limpiar" onclick="limpiar();">
+		</form>
+	<p id="contenido">
+
+	</p>
+	</body>
+</html>
