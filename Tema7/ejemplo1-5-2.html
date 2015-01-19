@@ -1,0 +1,45 @@
+<!--
+
+crear un formulario con una casilla de selección (campo checkbox) y que al activar ese campo se mostrarían otros
+contenidos en el formulario. Al desactivarlo, se ocultarían esos contenidos del formulario. 
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$('#mayoria_edad').click(function(evento){
+				console.log($('#mayoria_edad').is(":checked"));
+
+				if ($('#mayoria_edad').is(":checked")){
+					$('#formulariomayores').css("display","block");
+				}
+				else{
+					$('#formulariomayores').css("display","none");
+				}
+			});
+		});
+		</script>
+	</head>
+	<body>
+
+		<p id="contenido">
+			<form>
+				nombre: <input type="text" name="nombre">
+				<br/>
+				<input type="checkbox" name="mayor_edad" value="1" id="mayoria_edad"> Soy mayor de edad
+				<br/>
+				<div id="formulariomayores" style="display: none;">
+					Dato para mayores de edad: <input type="text" name="mayores_edad">
+				</div>
+			</form>	
+		</p>
+		<a href="index.html">volver</a>
+	</body>
+</html>

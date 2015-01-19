@@ -1,0 +1,29 @@
+<!--
+Para este primer ejemplo vamos a crear un evento click en el enlace, para mostrar un mensaje cuando se haga clic sobre
+el link. Para crear un evento click sobre un elemento tenemos que invocar al método click sobre ese elemento y pasarle
+como parámetro una función con el código que queremos que se ejecute cuando se hace clic. 
+
+Alejandro Gutierrez Lozano
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function () {
+			$('a').click(function(evento){
+				alert('Has pulsado el enlace...\nAhora seras enviado a DesarrolloWeb.com');
+			});
+		});
+		</script>
+	</head>
+	<body>
+
+		<p id="contenido">
+			<a href="http://www.desarrolloweb.com">DesarrolloWeb.com</a> 		
+		</p>
+		<a href="index.html">volver</a>
+	</body>
+</html>

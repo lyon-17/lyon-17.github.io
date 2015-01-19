@@ -1,0 +1,24 @@
+<!--
+ se hace una selección del elemento DIV de la capa y luego se ejecuta un método sobre él para cambiar el
+contenido HTML del elemento. 
+
+Alejandro Gutierrez Lozano
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+	</head>
+	<body>
+
+		<p id="contenido">
+			<div id="capa" style="padding: 10px; background-color: #FF8800">Haz click en un boton</div>
+			<input type="button" value="Botón A" onclick="$('#capa').html('Has hecho clic en el boton <b>A</b>')">
+			<input type="button" value="Botón B" onclick="$('#capa').html('Recibido un clic en el boton <b>A</b>')">		
+
+		</p>
+		<a href="index.html">volver</a>
+	</body>
+</html>

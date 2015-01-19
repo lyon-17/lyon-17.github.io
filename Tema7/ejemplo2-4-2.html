@@ -1,0 +1,51 @@
+<!--
+
+Si la función devuelve "false", se consigue detener por completo el proceso de iteraciones de each(). Esto es como si
+hiciéramos el típico "break".
+
+Si la función devuelve "true", se consigue pasar directamente a la próxima iteración del bucle. Es como hacer el típico
+"continue".
+
+Para ver estos dos casos realizaremos otro ejemplo de uso de each. 
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+		$(function(){
+			$('div').each(function(i){
+			elemento = $(this);
+				if(elemento.html() === 'white')
+					return true;
+				if (elemento.html() === 'nada')
+					return false;
+					elemento.css('color',elemento.html());
+			});
+		});
+		
+		</script>
+	</head>
+	<body>
+
+		<p id="contenido">
+			<div>red</div>
+			<div>blue</div>
+			<div>red</div>
+			<div>white</div>
+			<div>red</div>
+			<div>green</div>
+			<div>orange</div>
+			<div>red</div>
+			<div>nada</div>
+			<div>red</div>
+			<div>blue</div>
+		</p>
+		<a href="index.html">Volver</a>
+	</body>
+</html>

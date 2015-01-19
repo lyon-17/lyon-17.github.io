@@ -1,0 +1,119 @@
+<!--
+
+El ejemplo es bastante similar al anterior, con la salvedad que se ha creado un par de acciones adicionales para
+almacenar en los elementos variables de tipo objeto.
+
+Luego, al operar sobre esos datos de tipo objeto, comprobamos que en realidad sólo existe un objeto compartido por
+todos los elementos a los que fue asignado. Es decir, no se hicieron copias del objeto, sino que se asignaron en los datos
+simplemente su referencia. 
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+			 var array = [1,2,3];
+		$(function(){
+			$('a.enlaceAlmacenar').click(function(evento){
+				evento.preventDefault();
+				var valorAlmacenado = $(this).data('midato');
+				var mensaje = 'En el enlace <b>'+$(this).prop('id') + '</b> tiene el dato "midato" como: '+valorAlmacenado;
+				var valorAlmacenado2 = $(this).data('miobjeto');
+				mensaje += '<br/>Ademas, he leido un dato llamado "miobjeto" con valor: '+valorAlmacenado2;
+				$('#mensaje').html(mensaje);
+			});
+
+			$('#guardar').click(function(evento){
+				evento.preventDefault();
+				$('a').data('midato',array);
+				$('#mensaje').html('He guardado en todos los enlaces un dato llamado "midato" con el valor "mivalor"');
+			});
+
+			$('#guardarEnlace1').click(function(evento){
+				array = [3,4,5];
+				evento.preventDefault();
+				$('#enlace1').data('midato',array);
+				$('#mensaje').html('He guardado en el enlace1 un dato llamado "midato" con el valor "otro valor"');
+			});
+
+			$('#guardarObjeto').click(function(evento){
+				evento.preventDefault();
+				$('a').data('miobjeto',$('#capapruebas'));
+				$('#mensaje').html('He guardado todos los enlaces con un dato llamado "miobjeto" que es un objeto JQuery con el valor de "capapruebas"');
+			});
+
+			$('#operarObjetoEnlace1').click(function(evento){
+				evento.preventDefault();
+				$('#enlace1').data('miobjeto').html('cambio el html del objeto que hay en "miobjeto" del "enlace1"');
+			});
+
+			$('#operarObjetoEnlace2').click(function(evento){
+				evento.preventDefault();
+				$('#mensaje').html('Este es el HTML que hay en el objeto asociado a enlace2 en el dato "miobjeto":<br/>' + 
+					$('#enlace2').data('miobjeto').html());
+			});			
+			$('#eliminar').click(function(evento){
+				$('#enlace1').removeData('midato');
+				$('#mensaje').html('Acabo de eliminar el elemento "midato"');
+			});
+		});
+		
+		</script>
+	</head>
+	<body>
+
+		<p id="contenido">
+		<a href="#" id="enlace1" class="enlaceAlmacenar">Enlace 1</a>
+		<br/>
+		<a href="#" id="enlace2" class="enlaceAlmacenar">Enlace 2</a>
+		<br/>
+		<a href="#" id="enlace3" class="enlaceAlmacenar">Enlace 3</a>
+		<br/>
+		<br/>
+			<div id="mensaje">
+			Mensaje...
+			</div>
+		<ol style="line-height: 200%;">
+			<li>
+				<a id="guardar" href="#">guardar "midato" con valor "mivalor" en todos los enlaces</a>
+			</li>
+			<li>
+				<a id="eliminar" href="#">Eliminar</a>
+			</li>
+			<li>
+				<a id="guardarEnlace1" href="#">guardar "midato" con valor "otro valor" en el enlace 1</a>
+			</li>
+			<li>
+				<a id="guardarObjeto" href="#">guardar "miobjeto" con una referencia a la capa de pruebas</a>
+			</li>
+			<li style="line-height: 100%;">
+				<a id="operarObjetoEnlace1" href="#">Recuperar un objeto del enlace1 para hacer cosas con el<br/>
+					<span style="font-size: 8px; font-weight: bold;">
+						PULSAR ESTE ENLACE DESPUES DE HABER ALMACENADO EL OBJETO EN LOS ENLACES POR MEDIO DEL ENLACE DE ESTA LISTA MARCADO COMO 3
+					</span>
+				</a>
+			<li style="line-height: 100%;">
+				<a id="operarObjetoEnlace2" href="#">Recuperar un objeto del enlace2 para hacer cosas con el<br/>
+					<span style="font-size: 8px; font-weight: bold;">
+						PULSAR ESTE ENLACE DESPUES DE HABER ALMACENADO EL OBJETO EN LOS ENLACES POR MEDIO DEL ENLACE DE ESTA LISTA MARCADO COMO 3
+					</span>
+				</a>
+			</li>
+			</li>
+		</ol>
+		<br/>
+		<br/>
+		
+		<div id="capapruebas">
+		Este es el texto de una capa de pruebas...
+		</div>
+
+		</p>
+		<a href="index.html">Volver</a>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!--
+
+Each es un método que se utiliza sobre un conjunto de elementos que hayamos seleccionado con la función jQuery. Con
+each realizamos una iteración por todos los elementos del DOM que se hayan seleccionado.
+
+El método each recibe una función que es la que se tiene que ejecutar para cada elemento y dentro de esa función con la
+variable "this" tenemos una referencia a ese elemento del DOM. Adicionalmente, la función que se envía a each, puede
+recibir un parámetro que es el índice actual sobre el que se está iterando.
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+		$(function(){
+			$('p').each(function(i){
+			if(i%2==0){
+				$(this).css('background-color','#EEEEEE')
+			}
+			else
+				$(this).css('background-color','#CCCCCC');
+			});
+		});
+		
+		</script>
+	</head>
+	<body>
+
+		<p id="contenido">
+			<p>Primer parrafo</p>
+			<p>Segundo parrafo</p>
+			<p>Tercer parrafo</p>
+			<p>Uno mas</p>
+			<p>Y acabo...</p>
+		</p>
+		<a href="index.html">Volver</a>
+		
+	</body>
+</html>

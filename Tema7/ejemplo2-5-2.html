@@ -1,0 +1,35 @@
+<!--
+
+La propiedad length, que existe en cualquier objeto jQuery, nos sirve para obtener el número de elementos de la página
+que hemos seleccionado. Lo interesante de esta propiedad es que almacena directamente este valor, por lo que es más
+rápido y más aconsejable que calcular los elementos seleccionados con el método size(). 
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+
+		$(function(){
+			var elementosMiTexto = $('.mitexto');
+			alert ( 'hay ' + elementosMiTexto.length + ' elementos de la clase miTexto');
+			});
+		
+		</script>
+	</head>
+	<body>
+
+		<p id="contenido">
+			<p>Esto es un parrafo normal</p>
+			<p class="mitexto">Esto es un parrafo de la clase 'mitexto'</p>
+			<div>Un div normal</div>
+			<div class="mitexto">Ahora un div de la clase 'mitexto'</div>
+		</p>
+		<a href="index.html">Volver</a>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!--
+
+size() sirve, como decimos, para obtener el número de elementos seleccionados con la función jQuery.
+Simplemente devuelve el número de elementos que hay en el objeto, como un entero. 
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+		
+		$(function(){
+			var parrafos = $('p');
+			alert ('Hay ' + parrafos.size() + ' parrafos en la pagina');
+			});
+		
+		</script>
+	</head>
+	<body>
+
+		<p id="contenido">
+			<div>red</div>
+			<div>blue</div>
+			<div>red</div>
+			<div>white</div>
+			<div>red</div>
+			<div>green</div>
+			<div>orange</div>
+			<div>red</div>
+			<div>nada</div>
+			<div>red</div>
+			<div>blue</div>
+		</p>
+		<a href="index.html">Volver</a>
+	</body>
+</html>

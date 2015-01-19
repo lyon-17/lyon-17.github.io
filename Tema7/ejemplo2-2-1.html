@@ -1,0 +1,53 @@
+<!--
+
+Este uso de la función sirve para seleccionar elementos de la página. Recibe una expresión y se encarga de seleccionar
+todos los elementos de la página que corresponden con ella, devolviendo un objeto jQuery donde se encuentran todos
+los elementos de la página seleccionados y extendidos con las funcionalidades del framework. Adicionalmente,
+podemos pasarle un contexto de manera opcional. Si no se le envía un contexto, selecciona elementos del documento
+completo, si indicamos un contexto conseguiremos seleccionar elementos sólo dentro de ese contexto. 
+
+Si queremos, podemos utilizar el segundo parámetro opcional, que es el contexto. Con él podríamos conseguir
+seleccionar elementos que pertenecen a una zona concreta de nuestro documento. Por defecto el contexto es la página
+entera, pero lo podemos restringir de esta manera
+
+Ahora por completar un poco más, veamos otro ejemplo en el que seleccionamos todos los párrafos (etiqueta
+P), pero restringimos el contexto únicamente los que están en un DIV con id="div1".
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+		$(document).ready(function() {
+			var elem1 = $('#elem1');
+			elem1.css('background-color','#FF9999');
+
+			var divs = $('div');
+			divs.css('font-size','32pt');
+
+			var inputs = $('input',document.forms[0]);
+			inputs.css('color','red');
+
+			var parrafos_div1 = $('p','#elem1');
+			parrafos_div1.hide();
+				});
+		</script>
+	</head>
+	<body>
+
+		<p id="contenido">
+				<div id="elem1"><p>Este parrafo se llama elem1</p>Este otro elemento se llama elem1</div>
+				<div id="elem2">Este otro elemento se llama elem2</div>
+
+			<form>
+				Nombre<input type="name" id="name" value="nombre en rojo">
+			</form>
+		</p>
+		<a href="index.html">volver</a>
+	</body>
+</html>

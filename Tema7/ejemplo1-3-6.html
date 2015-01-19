@@ -1,0 +1,40 @@
+<!--
+
+Ahora veamos una pequeña modificación para alterar el comportamiento por defecto de los enlaces. Como sabemos,
+cuando se pulsa un enlace nos lleva a una URL. Luego al hacer click, primero se ejecuta lo que hayamos colocado en el
+evento click del enlace y luego el enlace lleva al navegador a una nueva URL.
+
+Este comportamiento se puede bloquear también desde jQuery, añadiendo una llamada al método preventDefault()
+sobre el evento. Si te fijas, la función definida para marcar el comportamiento del evento click sobre el enlace recibía un
+parámetro. Ese parámetro es un manejador de evento. Y tiene sus propios métodos y propiedades, como este
+preventDefault() que comentábamos.
+
+Invocando a evento.preventDefault() lo que conseguimos en este caso es que el link no lleve a
+ningún sitio, simplemente se ejecutará el código Javascript contenido para el evento click.
+
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function () {
+			$('a').click(function(evento){
+				alert('Has pulsado el enlace...\nAhora seras enviado a DesarrolloWeb.com');
+				evento.preventDefault();
+			});
+		});
+		</script>
+	</head>
+	<body>
+
+		<p id="contenido">
+			<a href="http://www.desarrolloweb.com">DesarrolloWeb.com</a> 		
+		</p>
+		<a href="index.html">volver</a>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!--
+
+El metodo data() del objeto jQuery sirve tanto para guardar un dato en un elemento como para consultarlo. Según el número
+de parámetros que reciba, realiza una u otra acción.
+• Si recibe un parámetro data(nombre): devuelve el valor que haya en el dato cuyo nombre se pasa por
+parámetro.
+• Si recibe dos parámetros data(nombre, valor): almacena un dato, cuyo nombre recibe en el primer parámetro,
+con el valor que recibe en el segundo parámetro.
+
+Como data() es un método que pertenece al objeto jQuery, podemos almacenar estos pares (dato, valor) en cualquiera de
+los elementos que seleccionemos con la función jQuery(). 
+
+removeData() sirve para eliminar un dato de un elemento y su funcionamiento es tan simple como enviar por parámetro
+el dato que se quiere eliminar del elemento.
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+
+		$(function(){
+			$('#guardar').click(function(evento){
+				$('a').data('midato','mivalor');
+				$('#mensaje').html('He guardado en todos los enlaces un dato llamado "midato" con el valor "mivalor"');
+			});
+			$('#guardarenlace1').click(function(evento){
+				$('#enlace1').data('midato','otro valor');
+				$('#mensaje').html('He guardado en el enlace1 un dato llamado "midato" con el valor "otro valor"');
+			});
+			$('a').click(function(evento){
+				evento.preventDefault();
+				var valorAlmacenado = $(this).data('midato');
+				$('#mensaje').html('En el enlace <b>' + $(this).prop('id') + '</b> tiene el dato "midato" como <b>'+valorAlmacenado+'</b>');
+			})
+		});
+		
+		</script>
+	</head>
+	<body>
+
+		<p id="contenido">
+		<a href="#" id="enlace1">Enlace 1</a>
+		<br/>
+		<a href="#" id="enlace2">Enlace 2</a>
+		<br/>
+		<a href="#" id="enlace3">Enlace 3</a>
+		<br/>
+		<br/>
+			<div id="mensaje">
+			Mensaje...
+			</div>
+		<br/>
+		<button id="guardar">Guardar "midato" con valor "mivalor" en todos los enlaces</button>		
+		<br/>
+		<button id="guardarenlace1">Guardar "midato" con valor "otro valor" en el enlace 1</button>		
+		</p>
+		<a href="index.html">Volver</a>
+	</body>
+</html>
