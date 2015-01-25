@@ -1,0 +1,42 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+
+		function clicAlerta(){
+				console.log('has hecho clic');
+			}
+
+		$(function(){
+			$('p').bind('click mouseenter mouseleave', function(evento){
+				if($(this).css("color")!="rgb(250, 100, 0)")
+					$(this).css('color','rgb(250,100,0)');
+				else
+					$(this).css('color','rgb(150,0,255)');
+				
+			});
+			
+			$('.miclase').bind('click',clicAlerta);
+
+			$('#quitarevento').bind('click',function(){
+				$('.miclase').unbind('click',clicAlerta);
+			})
+		});
+
+		
+		</script>
+	<body>
+		<p class='miclase'>parrafo1</p>
+		<p>parrafo2</p>
+		<input type="button" value="quitar el console.log del clic del primer parrafo" id="quitarevento">
+		<br/><a href="index.html">Volver</a>
+	</body>
+</html>

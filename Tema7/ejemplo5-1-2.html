@@ -1,0 +1,41 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+		$(function(){
+			$('#micapa').css({
+				'background-color': '#FF8800',
+				'position': 'absolute',
+				'width': '100px',
+				'top': '100px',
+				'left': '200px'
+			});
+			$('#micapa').mouseover(function(){
+				antiguoLeft = parseInt($(this).css('left'));
+				console.log('antiguoLeft: '+antiguoLeft);
+				$(this).css('left', antiguoLeft + 10 + 'px');
+			});
+			$('#micapa').click(function(){
+				$(this).css('width', function(index,value){
+					console.log('value: '+value);
+					var aumento = prompt('cuanto quieres aumentar?','25');
+					return (parseInt(value)+parseInt(aumento));
+				});
+			});
+		});
+
+		
+		</script>
+	<body>
+			<div id='micapa' style='color: red'>Mi capa!</div>
+		<br/><a href="index.html">Volver</a>
+	</body>
+</html>

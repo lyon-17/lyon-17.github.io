@@ -6,6 +6,8 @@ var numeroDNI = prompt("indica el numero de DNI");
 	else{
 		var letraDNI = prompt("indica la letra del DNI");
 		var comprobarLetra = numeroDNI%23; // averigua la letra del DNI
+		console.log(numeroDNI);
+		console.log(letras[comprobarLetra])
 		if(letraDNI.toUpperCase() !== letras[comprobarLetra]){ // compara la letra escrita y la correcta
 				alert("Letra del DNI incorrecta");
 		}

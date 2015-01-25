@@ -1,0 +1,63 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<style type="text/css">
+
+		.tip{
+			background-color: #FFCC99;
+			padding: 10px;
+			display: none;
+			position: absolute;
+		}
+		</style>
+
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+		$(function(){
+			var tip = $('#tip1');
+			var tip2 = $('#tip2');
+
+			$('#elemento1').mouseenter(function(e){
+				tip.css('left',e.pageX+5);
+				tip.css('top',e.pageY+5);
+				tip.css('display','block');
+				tip.html('left: '+e.pageX+5 + ' top: '+e.pageY+5);
+			});
+			$('#elemento1').mouseleave(function(e){
+				tip.css('display','none');
+			});
+			$('#elemento2').mouseenter(function(e){
+				tip2.css('left',e.pageX+5);
+				tip2.css('top',e.pageY+5);
+				tip2.css('display','block');
+			});
+			$('#elemento2').mouseleave(function(e){
+				tip2.css('display','none');
+			});
+		});
+
+		
+		</script>
+	<body>
+			<div id='elemento1' style='
+				background-color: #CCCCFF
+				padding: 5px;'
+			>
+				Pasa el raton por encima del elemento1
+			</div>
+			<p>
+				Este texto es para poner <a id="elemento2" href="#">Otro elemento con tip</a>
+			</p>
+			<div class="tip" id='tip1'>Esto es para explicar algo sobre el elemento1</div>
+			<div class="tip" id="tip2">Esto es para explicar algo sobre el elemento2</div>
+
+		<br/><a href="index.html">Volver</a>
+	</body>
+</html>

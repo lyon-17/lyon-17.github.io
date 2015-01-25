@@ -1,0 +1,44 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+		$(function(){
+			var numClics = 0;
+			var numDobleClic = 0;
+
+			$('#micapa').click(function(e){
+				numClics++;
+				$('#mensaje').html('numero de clics: '+numClics);
+			});
+			$('#micapa').dblclick(function(e){
+				numDobleClic++;
+				$('#mensaje').html('numero de doble Clic: ' + numDobleClic);
+			})
+		});
+
+		
+		</script>
+	<body>
+			<div id='micapa' style='
+				padding: 10px;
+				background-color: #FFCC99;
+				width: 150px;
+				float: left;'>
+				Hazme doble click
+			</div>
+			<div id='mensaje' style='
+				padding: 10px;
+				margin-left: 180px;'>
+				Aqui voy a colocar mensajes para que los leas
+			</div>
+		<br/><a href="index.html">Volver</a>
+	</body>
+</html>

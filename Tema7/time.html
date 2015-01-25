@@ -1,0 +1,40 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<style type="text/css">
+		</style>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+		$(function(){
+			$('#trial').bind({
+				mousemove: function(e){
+					$('#position').html('X: '+e.pageX + ' Y: '+e.pageY);
+				},
+				click: function(e){
+					console.log('currentTarget: ');
+					console.log(e.currentTarget);
+					console.log('timeStamp: ');
+					console.log(e.timeStamp);
+				}
+			});
+		});
+		
+		</script>
+	<body>
+			<h3>Los atributos pageX, pageY, currentTarget, timeStamp... ¿A qué objeto pertenecen? Demuestra su uso</h3>
+			<p>Pertenecen al objeto "Event"</p>
+			Aqui indicara la posicion del raton de la pagina
+			<div id="position"></div>
+			Haz click sobre el div y abre la consola para mostrar el uso de currentTarget y TimeStamp
+			<div id="trial"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
+			
+		<br/><a href="indexEjercicios.html">Volver</a>
+	</body>
+</html>

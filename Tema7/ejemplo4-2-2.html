@@ -1,0 +1,29 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+		$(function(){
+			$('#boton').click(function(){
+				$('td').removeAttr('noWrap');
+			});
+		});
+		
+		</script>
+	<body>
+		<table width="50">
+			<tr>
+				<td nowrap>Esta celda tiene un nowrap, con lo que todo el texto se muestra en la misma linea. Pero realmente la tabla mide 50 pixeles de anchura, luego tendrian que aparecer varias lienas</td>
+			</tr>
+		</table>
+		<input type="button" id='boton' value='Eliminar noWrap'>
+		<br/><a href="index.html">Volver</a>
+	</body>
+</html>

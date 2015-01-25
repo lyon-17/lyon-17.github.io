@@ -1,0 +1,56 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<style type="text/css">
+
+			label{
+				display: inline-block;
+				margin: 3px;
+				width: 50px;
+				text-align: right;
+			}
+			input{
+				margin: 5px;
+			}
+		</style>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+		$(function data(){
+			$('#test').click(function(){
+			$('#checked').attr('value',$('input:checked').length);
+			$('#prop').attr('value',($('#check').prop('checked') + ' ' + $('#radio').prop('checked')));
+			$('#selected').attr('value',$('input:selected').length);
+			$('#attr').attr('value',($('#check').attr('checked')  + ' ' + $('#radio').attr('checked')));
+			$('#val').attr('value',($('input:checkbox:checked').val()  + ' || ' + $('input:radio:checked').val()));
+
+			$('#check').prop('checked',false);
+			$('#radio').prop('checked',false);
+			});
+		});
+		
+		</script>
+	<body>
+			<h3>Distintas formas de acceder al atributo checked de un checkbox y radio</h3>
+			<label>:checked</label>
+			<input type="text" id="checked"><br/>
+			<label>prop</label>
+			<input type="text" id="prop"><br/>
+			<label>:selected</label>
+			<input type="text" id="selected"><br/>
+			<label>attr</label>
+			<input type="text" id="attr"><br/>
+			<label>val</label>
+			<input type="text" id="val"><br/>
+			<input type="checkbox" id="check" value="it's a checkbox!">
+			<input type="radio" id="radio" value="it's a radiobutton!">
+			<input type="button" id="test" value="actualizar">
+		<br/><a href="indexEjercicios.html">Volver</a>
+	</body>
+</html>

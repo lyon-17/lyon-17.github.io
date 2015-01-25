@@ -1,0 +1,54 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<style type="text/css">
+
+		.rojo{
+			background-color: red;
+		}
+
+		</style>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+
+		$(function(){
+			$('body').on( 'click','.verde', function(e){
+				var elem = $(this);
+				if(elem.html() != 'Hiciste clic'){
+					$(this).html('Hiciste clic');
+				}
+				else{
+					elem.html('Hiciste de nuevo clic');
+				}
+			});
+
+			$('#insertaelem').click(function(e){
+				var nuevoElemento = $('<div class="verde">Elemento creado e insertado dinamicamente</div>');
+				nuevoElemento.appendTo($(document.body));
+			});
+			$('#ponerclaseverde').click(function(e){
+				$('#noverde').addClass('verde');
+			});
+		});
+
+		
+		</script>
+	<body>
+		<div class="verde">Esta capa tiene la clase verde (haz click)</div>
+		<div class="verde">Segunda capa tiene la clase verde</div>
+		<div id="noverde">Tercera capa no es verde </div>
+		<div class="verde">Otra capa tiene la clase verde</div>
+
+		<input type="button" value="insertar nuevo elemento verde" id="insertaelem">
+		<input type="button" value="poner la clase verde en el div que no la tiene" id="ponerclaseverde">
+
+		<br/><a href="index.html">Volver</a>
+	</body>
+</html>

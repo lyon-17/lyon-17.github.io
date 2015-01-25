@@ -1,0 +1,34 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+		$(function(){
+			$('#mitexto').keypress(function(evento){
+				evento.preventDefault();
+				$('#escrito').html(evento.which + ': '+String.fromCharCode(evento.which));
+			});
+
+		});
+
+		
+		</script>
+	<body>
+		<form>
+			<textarea cols="300" rows="2" id="mitexto">Escribe algo aqui</textarea>
+			<br/>
+			<b>Tecla pulsada:</b>
+			<br/>
+			<div id="escrito"></div>
+		</form>
+
+		<br/><a href="index.html">Volver</a>
+	</body>
+</html>
