@@ -1,0 +1,93 @@
+/*Estilo para el portal de la pagina*/
+
+/*Fuentes*/
+
+@font-face{
+	font-family: regular;
+	src: url(../fonts/OpenSans-Regular.ttf) format('truetype');
+}
+
+/*Principal*/
+
+/*Animacion para chrone*/
+@-webkit-keyframes appear{
+	0%{opacity: 0.2}
+	25%{opacity: 0.4}
+	50%{opacity: 0.6}
+	75%{opacity: 0.8}
+	100%{opacity: 0.9}
+}
+
+/*Animacion para mozilla*/
+@-moz-keyframes appear{
+	0%{opacity: 0.2}
+	25%{opacity: 0.4}
+	50%{opacity: 0.6}
+	75%{opacity: 0.8}
+	100%{opacity: 0.9}
+}
+
+body{
+	-webkit-animation: appear 2s;
+	-moz-animation: appear 2s;
+	background: url('../img/forest.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 100%;
+	opacity: 0.9;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+#contenido{
+	background-color: rgba(0,0,0,0.7);
+	height: 100%;
+	margin: 0 auto;
+	width: 80%;
+}
+
+a{
+	color: rgba(155,78,0,0.7);
+	text-decoration: none;
+}
+
+button{
+	-webkit-animation: appear 2s;
+	-moz-animation: appear 2s;
+	color: rgba(40,255,40,0.7);
+	margin-top: 20px;
+	text-decoration: none;
+	*transform: translate(-25px,0px);
+}
+/*h1,h2,h3...*/
+
+h1{
+	color: rgba(0,255,0,1);
+	font-size: 44px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+h3{
+	color: rgba(45,255,45,1);
+	*margin: 0px 100px;
+}
+
+/*Entre 0 y 720*/
+@media screen and (max-width: 720px){
+
+	
+	#contenido{
+		width: 80%;
+	}
+}
+
+/*Entre 720 y 1080*/
+@media screen and (min-width: 721px) and (max-width: 1080px){
+	
+	
+	#contenido{
+		width: 80%;
+	}
+}
