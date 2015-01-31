@@ -1,0 +1,79 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<style type="text/css">
+		.tip{
+			display: none;
+			position: absolute;
+		}
+		.otroestilotip{
+			display: none;
+			position: absolute;
+			color: red;
+		}
+		</style>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+		jQuery.fn.creaTip = function(textoTip, opciones){
+			//Opciones por defecto
+			var configuracion = {
+				velocidad: 500,
+				animacionMuestra: {width: 'show'},
+				animacionOculta: {opacity: 'hide'},
+				claseTip: 'tip'
+			}
+			jQuery.extend(configuracion,opciones);
+			this.each(function(){
+				elem = $(this);
+				var miTip = $('<div class="' + configuracion.claseTip + '">' + textoTip + '</div>');
+				$(document.body).append(miTip);
+				elem.data('capatip',miTip);
+
+				elem.mouseenter(function(e){
+					var miTip = $(this).data('capatip');
+					miTip.css({
+						left: e.pageX + 10,
+						top:e.pageY + 5
+					});
+					miTip.animate(configuracion.animacionMuestra, configuracion.velocidad);
+				});
+				elem.mouseleave(function(e){
+					var miTip = $(this).data('capatip');
+					miTip.animate(configuracion.animacionOculta,configuracion.velocidad);
+				})
+			});
+			return this;
+		};
+
+		$(function(){
+			$('#elemento1').creaTip('todo bien...');
+			$('#elemento2').creaTip('otra prueba...',{
+				velocidad: 1000,
+				claseTip: 'otroestilotip',
+				animacionMuestra: {
+					opacity: 'show',
+					padding: '25px',
+					'font-size': '2em'
+				},
+				animacionOculta: {
+					height: 'hide',
+					padding: '5px',
+					'font-size': '1em'
+				}
+			});
+		});
+		
+		</script>
+	<body>
+		<div id='elemento1' style="padding-bottom: 10px;">Un simple div</div>
+		<p id="elemento2">Un simple parrafo</p>
+		<br/><a href="index3.html">Volver</a>
+	</body>
+</html>

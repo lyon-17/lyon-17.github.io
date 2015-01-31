@@ -1,0 +1,66 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+
+			
+
+		$(function(){
+			$('#ocultartoda').click(function(e){
+				$('#milista').fadeOut();
+			});
+
+			$('#mostrartoda').click(function(e){
+				$('#milista').fadeIn();
+			});
+
+			$('#pororden').click(function(e){
+				var opacidad_deseada = $('#selopacidad').prop('value');
+				$('#e1').fadeTo(500,opacidad_deseada,function(){
+					$('#e2').fadeTo(500,opacidad_deseada,function(){
+						$('#e3').fadeTo(500,opacidad_deseada)
+					});
+				});
+			});
+			$('#ocultarmostrar').click(function(e){
+				$('#milista').fadeOut(function(){
+					$(this).fadeIn();
+				});
+			});
+		});
+		
+		</script>
+	<body>
+	<h1>Fading en jQuery</h1>
+	<b>Mostrar y ocultar elementos de forma suavizada con fading</b>
+		<p>
+			<a href="#" id='ocultartoda'>ocultar toda la lista</a>
+			<a href="#" id="mostrartoda">Mostrar toda la lista</a>
+			<a href="#" id="ocultarmostrar">Oculta la lista y la muestra luego</a>
+		</p>
+		<ul id='milista'>
+		<li id='e1'>Elemento 1</li>
+		<li id='e2'>Segundo elemento</li>
+		<li id='e3'>Tercer li</li>
+		</ul>
+		<form name='f1'>
+			<select name='opacidad' id='selopacidad'>
+				<option value="0.2">20%</option>
+				<option value="0.4">40%</option>
+				<option value="0.6">60%</option>
+				<option value="0.8">80%</option>
+				<option value="1">100%</option>
+			</select><br/>
+			<a href="#" id="pororden">Cambia la opacidad de los elementos de la lista por orden</a>
+		</form>
+		<br/><a href="index3.html">Volver</a>
+	</body>
+</html>

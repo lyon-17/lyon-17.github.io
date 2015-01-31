@@ -1,0 +1,43 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+		jQuery.fn.cuentaCaracteres = function () {
+			this.each(function(){
+				elem = $(this);
+				var contador = $('<div>Contador caracteres: '+elem.prop("value").length+'</div>');
+				elem.after(contador);
+				elem.data('campocontador',contador);
+
+				elem.keyup(function(){
+					var elem = $(this);
+					var campocontador = elem.data('campocontador');
+					campocontador.text('contador caracteres: ' +elem.prop("value").length);
+
+				});
+			});
+			return this;
+		};
+		$(function(){
+			$('textarea').cuentaCaracteres();
+		});
+		
+		</script>
+	<body>
+		<form>
+			<textarea rows='5' cols='30' id='mitextarea'></textarea>
+			<br/>
+			<br/>
+			<textarea rows='5' cols='30' id='otrotextarea'>Otra cuenta...</textarea>
+		</form>
+		<br/><a href="index3.html">Volver</a>
+	</body>
+</html>

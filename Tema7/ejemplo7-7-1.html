@@ -1,0 +1,146 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<style type="text/css">
+		.tip{
+			display: none;
+			position: absolute;
+		}
+		.otroestilotip{
+			display: none;
+			position: absolute;
+			color: red;
+		}
+		</style>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+	jQuery.fn.checkboxPersonalizado = function (opciones){
+		var conf = {
+			activo: true,
+			colorTextos: {
+				activo: '#0000FF',
+				pasivo: '#666699'
+			},
+			textos: {
+				activo: '',
+				pasivo: ''
+			},
+			imagen: {
+				activo: 'images/thumb_up.png',
+				pasivo: 'images/thumb_down.png'
+			},
+			cssElemento: {
+				padding: '2px 2px 2px 24px',
+				display: 'block',
+				margin: '2px',
+				border: '1px solid #EEEEEE',
+				cursor: 'pointer'
+			},
+			cssAdicional: {
+
+			},
+			nameCheck: ''
+		};
+		jQuery.extend(conf, opciones);
+
+			this.each(function(){
+				//variables locales al plugin
+				var miCheck = $(this);
+				var activo = conf.activo;
+				//Checkbox interno y no visible
+				var elementoCheck = $('<input type="checkbox" style="display: none;"/>');
+				//la configuracion del nombre
+				if(conf.nameCheck == ""){
+					elementoCheck.prop('name',miCheck.text());
+				}
+				else{
+					elementoCheck.prop('name',conf.nameCheck);
+				}
+				//inserto el checkbox en la pagina
+				miCheck.before(elementoCheck);
+				//aplicar estilos
+				miCheck.css(conf.cssElemento);
+				miCheck.css(conf.cssAdicional);
+				//si el elemento estaba marcado
+				if(activo)
+					activar();
+				else
+					desactivar();
+
+				miCheck.click(function(e){
+					//comprobar activo
+					if(activo)
+						desactivar();
+					else
+						activar();
+					activo = !activo;
+				});
+				//funcion local para desactivar el checkbox
+				function desactivar(){
+					miCheck.css({
+						background: 'transparent url(' + conf.imagen.pasivo + ') no-repeat 3px',
+						color: conf.colorTextos.pasivo
+					});
+					//si hay un texto cuando estaba en pasivo
+					if(conf.textos.pasivo !== ''){
+						miCheck.text(conf.textos.pasivo);
+					}
+					//desmarcar el checkbox
+					elementoCheck.prop('checked','false');
+				}
+				function activar(){
+					miCheck.css({
+						background: 'transparent url('+ conf.imagen.activo + ') no-repeat 3px',
+						color: conf.colorTextos.activo
+					});
+					if(conf.textos.activo !== '')
+						miCheck.text(conf.textos.activo);
+					elementoCheck.prop('checked','true');
+				}
+			});
+		return this;
+	};
+
+		$(function(){
+			$('.ch').checkboxPersonalizado();
+
+			$('#otro').checkboxPersonalizado({
+				activo: false,
+				colorTextos: {
+					activo: '#FF8800',
+					pasivo: '#9988AA'
+				},
+				imagen: {
+					activo: 'images/weather_cloudy.png',
+					pasivo: 'images/weather_rain.png'
+				},
+				textos: {
+					activo: 'buen tiempo :D!',
+					pasivo: 'Buena cara !D:'
+				},
+				cssAdicional: {
+					border: '1px solid #DDDD55',
+					width: '100px'
+				},
+				nameCheck: 'buen_tiempo'
+			});
+		});
+		
+		</script>
+	<body>
+		<span class='ch'>Seleccionar</span>
+		<span class='ch'>No me interesa</span>
+		<span class='ch'>Wololoooo</span>
+		<br/>
+		<br/>
+		<span id='otro'>otro suelto</span>
+		<br/><a href="index3.html">Volver</a>
+	</body>
+</html>

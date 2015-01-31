@@ -1,0 +1,72 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<style type="text/css">
+		button.botondetener{
+			display: none;
+		}
+		#micapa{
+			background-color: #FF8800;
+			font-size: 1.5em;
+			left: 300px;
+			margin-top: 20px;
+			padding: 18px;
+			position: absolute;
+			text-align: center;
+			top: 100px;
+			width: 400px;
+		}
+		</style>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+
+		var capa;
+
+		$(function(){
+			$("#botoncomenzar").click(function(){
+				capa = $("#micapa");
+				capa.queue(function(continua){
+				$("button.botondetener").show(500);
+				continua();
+			});
+			capa.animate({"left": "0px"}, 5000);
+			capa.animate({"left": "200px"}, 5000);
+			capa.queue(function(continua){
+				$("button.botondetener").hide(500);
+				continua();
+			});
+			}); 
+
+			$('#botonparar').click(function(){
+				$('#micapa').stop();
+			});
+
+			$('#botonparallegar').click(function(){
+				$('#micapa').stop(false,true);
+			});
+			$('#botonparartodo').click(function(){
+				$('#micapa').queue([]);
+				$('#micapa').stop();
+				//igual que
+				$('#micapa').stop(true);
+				console.log('Todo ha sido parado. Pasos en cola: '+ $('#micapa').queue().length);
+			});
+		});
+		
+		</script>
+	<body>
+		<button id="botoncomenzar">Comenzar animacion</button><br/>
+		<button id="botonpara" class="botondetener">Pasar a la siguiente etapa de la animacion</button><br/>
+		<button id="botonparallegar" class="botondetener">Pasar a la siguiente etapa de la animacion pero llegar hasta el final planeado</button><br/>
+		<button id="botonparartodo">Parar todo</button><br/>
+		<div id="micapa">Hola a todos</div>
+		<br/><a href="index3.html">Volver</a>
+	</body>
+</html>

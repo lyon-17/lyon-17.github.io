@@ -1,0 +1,62 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<style type="text/css">
+
+		#micapa{
+			background-color: #3d3;
+			height: 50px;
+			left: 200px;
+			position: absolute;
+			top: 150px;
+			width: 50px;
+		}
+		</style>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+		
+		function muestraRestantesCola(){
+			var numFuncionesEnCola = $('#micapa').queue().length;
+			$('#mensaje').text('En el momento de hacer el ultimo clic en los botones hay '+ numFuncionesEnCola +' funciones de efectos en cola');
+		}
+
+		$(function(){
+			$('#botonfade').click(function(){
+				capa = $('#micapa');
+				capa.fadeOut(500);
+				capa.fadeIn(500);
+				muestraRestantesCola();
+			});
+			$('#botonslide').click(function(){
+				capa = $('#micapa');
+				capa.slideUp(500);
+				capa.slideDown(500);
+				muestraRestantesCola();
+			});
+			$('#botontamanocola').click(function(){
+				muestraRestantesCola();
+			});
+		});
+		
+		</script>
+	<body>
+
+		<button id="botonfade">Muestra y luego oculta con fadeIn y fadeOut</button>
+		<button id="botonslide">Muestra y luego oculta con slideUp y slideDown</button>
+		<button id="botontamanocola">Muestra el numero de funciones en cola ahora mismo</button>
+		<div id="mensaje">
+			En estos momentos no hay funciones en la cola por defecto.
+			<br/>
+			<span class="notar">Pulsa repetida veces los botones de arriba para ir metiendo funciones en la cola</span>
+		</div>
+		<div id="micapa"></div>
+		<br/><a href="index3.html">Volver</a>
+	</body>
+</html>

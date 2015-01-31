@@ -1,0 +1,54 @@
+<!--
+
+Alejandro Gutierrez Lozazo
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<style type="text/css">
+		button.botondetener{
+			display: none;
+		}
+		#micapa{
+			background-color: #DDDDFF;
+			border: 1px solid #BBBBBB;
+			font-family: tahoma, verdana, sans-serif;
+			font-size: 0.75em;
+			left: 50px;
+			padding: 10px;
+			position: absolute;
+			top: 20px;
+			width: 740px;
+		}
+		</style>
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+
+		<script type="text/javascript">
+
+		var capa;
+
+		function colaEfectos(){
+			capa = $('#micapa');
+			capa.slideUp(1000);
+			capa.delay(2000);
+			capa.slideDown(1000);
+
+			capa.fadeTo(1500,0.3).delay(3000).fadeTo(500,1);
+			capa.delay(500);
+			capa.animate({
+				'font-size':'+=0.5em'
+			},1000,colaEfectos);
+		}
+
+		$(function(){
+			colaEfectos();
+		});
+		
+		</script>
+	<body>
+		<div id="micapa">Vamos a ejecutar varios metodos para hacer una cola de efectos, pero vamos a ponerles un retardo entre unos y otros</div>
+		<br/><a href="index3.html">Volver</a>
+	</body>
+</html>
