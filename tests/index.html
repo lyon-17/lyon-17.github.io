@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<charset="UTF-8">
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="../jquery-ui.js"></script>
+
+		<script type="text/javascript">
+		$(document).ready(function () {
+			console.log('hi');
+			$('#fecha').datepicker({
+				inline:true
+			});
+			$('#accordion').accordion();
+		});
+		</script>
+	</head>
+	<body>
+		<div id="contenido">
+			<header>
+				<h1>Pagina para comprobar el funcionamiento de jQuery ui</h1>
+				<h2>Todo tiene un comienzo</h2>
+			</header>
+			<nav>
+				<ul>
+					<li>Home</li>
+					<li>Lista</li>
+					<li>About</li>
+					<li>contacto</li>
+				</ul>
+			</nav>
+			<main>
+				<h3>Secciones!</h3>
+				<section>
+					<div id="accordion">
+					<h3>First</h3>
+						<article>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</article>
+						<h3>Second</h3>
+						<article>
+						<picture>
+							<img src="small.png" alt="Your browser doesn't support picture">
+						</picture>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</article>
+					</div>
+				</section>
+					<h2>Section del formulario</h2>
+				<section>
+					<form>
+						<label>Nombre</label>
+						<input type="text" value="nombre" id="nombre">
+						<label>Fecha</label>
+						<input type="text" id="fecha">
+						<label>Nick</label>
+						<input type="text" id="nick">
+					</form>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>

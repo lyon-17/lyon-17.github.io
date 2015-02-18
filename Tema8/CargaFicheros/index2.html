@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Pagina con Ajax</title>
+		<script type="text/javascript" src="js/funciones.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript">
+		function cargaPagina(){
+			iniciar();
+			var pagina = document.getElementById('url').value;
+			$("#pagina").load(pagina);
+			}
+
+
+		</script>
+		<style type="text/css">
+		body{
+			font-family: arial;
+		}
+		form{
+			border: 1px solid black;
+			border-radius: 5px;
+			display: inline-block;
+			text-align: center;
+		}
+
+		label{
+			display: inline-block;
+			margin: 2px;
+			min-width: 120px;
+			padding: 2px;
+		}
+
+		input[type="text"]{
+			font-size: 16px;
+			margin: 3px;
+		}
+
+		input[type="button"]{
+			margin: 3px;
+			padding: 5px;
+		}
+		textarea{
+			height: 300px;
+			overflow-x: scroll;
+			overflow-y: scroll;
+			resize: none;
+			width: 100%;
+		}
+
+		#pagina{
+			border: 1px solid black;
+			border-radius: 2px;
+			min-height: 20px;
+		}
+
+		</style>
+	</head>
+	<body>
+		<form>
+			<label>Url a cargar:</label>
+			<input type="text" id="url" value="ejemplo.html"><br/>
+			<input type="button" id="mostrar" value="Mostrar" onclick="cargaPagina()">
+		</form>
+		<div id="estado">Informacion sobre el estado de la peticion...</div>
+		<div id="estadoTexto">Informacion sobre el estado...</div>
+
+		<h2>Aqui se mostrara el codigo</h2>
+
+		<textarea id="texto" readonly="true"></textarea>
+
+		<h2>Aqui se insertará la página</h2>
+
+		<div id="pagina"></div>
+		<p>
+			<a href="../index.html">Volver</a>
+		</p>
+	</body>
+</html>
