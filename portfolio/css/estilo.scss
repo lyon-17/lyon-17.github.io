@@ -1,0 +1,339 @@
+
+$black: rgba(75,106,77,1);
+$gray: rgba(43,43,41,0.9);
+$cyan: rgba(9,58,62,0.95);
+$foto: url(../img/foto.jpg);
+$fondo: url(../img/background.jpg);
+
+*{
+	padding: 0;
+	margin: 0 auto;
+}
+
+/*#Ids*/
+#contenido{
+	margin-top: 10px;
+	width: 98%;
+}
+
+#datepicker{
+	color: white;
+	transform: translate(-470px, 0px);
+}
+
+#home h4{
+	transform: translate(0px, 200px);
+}
+
+#mifoto{
+	background-size: 100% 100%;
+	background-image: $fondo;
+	border-radius: 50px;
+	height: 100px;
+	width: 100px;
+}
+
+section#trabajos aside{
+	@media screen and (max-width: 350px){
+		display: none;
+	}
+}
+
+#SobremiSection{
+	display: inline-block;
+	height: 100%;
+	margin: 2px;
+	padding: 3px;
+	width: 48%;
+	& img{
+		border: 1px;
+		border-radius: 100px;
+	}
+	@media screen and (max-width: 350px){
+		display: block;
+		height: 75%;
+		width: 98%;
+	}
+}
+
+#SobremiImg{
+	display: inline-block;
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	& h3{
+		*display: inline-block;
+	}
+	& img{
+		border-radius: 15px;
+		margin: 5px;
+		transform: translate(10px,0px);
+	}
+	@media screen and (max-width: 350px){
+		height: 35%;
+		width: 100%;
+		& img{
+			height: 80px;
+			width: 80px;
+		}
+	}
+}
+
+#tabs{
+	& ul{
+		text-align: center;
+		transform: translate(0px,5px);
+		& li{
+			border-top: 2px solid white;
+			border-right: 2px solid white;
+			border-left: 2px solid white;
+			border-radius: 0px;
+			display: inline-block;
+			font-size: 18px;
+			margin: 1px;
+			padding: 3px;
+			&:hover{
+				background-color: white;
+			}
+		}
+	}
+	& div{
+		margin: 2px;
+		padding: 3px;
+		ol li{
+		list-style-type: none;
+		}
+	}
+}
+
+#tabsContent{
+	*border: 2px solid white;
+}
+
+
+
+/*h1,h2,h3...*/
+h1{
+	margin: 2px;
+}
+
+h2{
+	border-bottom: 2px solid white;
+	font-size: 20px;
+	margin: 3px;
+	text-align: center;
+}
+
+h3{
+	font-size: 28px;
+	margin: 5px;
+	text-align: center;
+}
+
+h4{
+	font-size: 24px;
+	text-align: center;
+	transform: translate(0px,125px);
+}
+
+/*main*/
+
+article{
+	border: 1px solid white;
+	border-radius: 10px;
+	display: inline-block;
+	height: 75%;
+	margin: 2px 20px 2px 2px;
+	padding: 3px;
+	width: 15%;
+	& a{
+		color: $black;
+		font-size: 20px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	& p{
+		display: none;
+		font-size: 18px;
+		padding: 0;
+		position: absolute;
+		width: 10%;
+		vertical-align: bottom;
+		@media screen and (max-width: 350px){
+			width: 80%;
+		}
+	}
+	@media screen and (max-width: 350px){
+		margin: 10px 2px 2px 10px;
+		height: 100px;
+		width: 85%;
+	}
+}
+
+aside{
+	& article{
+		border-radius: 0;
+		float: left;
+	}
+}
+
+body{
+	background-color: $cyan;
+	background-size: 100% 100%;
+	opacity: 0.8;
+}
+
+
+footer{
+	background-color: $gray;
+	text-align: center;
+	vertical-align: bottom;
+	& p{
+		font-size: 20px;
+	}
+}
+
+form{
+	min-height: 250px;
+}
+
+label{
+	display: inline-block;
+	margin-left: 3px;
+	width: 100%;
+}
+
+input[type="text"]{
+	width: 50%;
+	@media screen and (max-width: 350px){
+	margin: 3px;
+	width: 80%;
+	}
+}
+
+nav{
+	display: inline-block;
+	font-size: 20px;
+	text-align: right;
+	width: 100%;
+	& ul{
+		display: inline-block;
+		& li{
+			display: inline-block;
+			margin-right: 5px;
+			& a{
+				*color: white;
+				&:hover{
+					border-bottom: 2px solid white;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 350px){
+		display: none;
+	}
+}
+
+section{
+	background-color: $gray;
+	background-size: 100% 100%;
+	color: $black;
+	min-height: 500px;
+	height: 100%;
+	padding: 10px 5px 5px 5px;
+	@media screen and (max-width: 350px){
+		min-height: 650px;
+	}
+	& p{
+		padding: 5px 0px;
+	}
+}
+
+/*(Por el calendario)*/
+span{
+	color: white;
+}
+
+ul{
+	& li{
+		list-style-type: none;
+		& a{
+			color: $black;
+			text-decoration: none;
+		}
+	}
+}
+
+textarea{
+	width: 50%;
+	@media screen and (max-width: 350px){
+	margin: 3px;
+	resize:none;
+	width: 80%;
+	}
+}
+
+/*.class*/
+
+.bottom{
+	background-color: $black;
+	height: 5px;
+	width: 100%;
+}
+
+.grupoaside{
+	min-height: 200px;
+}
+
+.smallNav{
+	display: none;
+	@media screen and (max-width: 350px){
+		display: block;
+		height: 40px;
+		position: absolute;
+		width: 95%;
+	}
+	& ul{
+		display: none;
+		width: 100%;
+		& li a{
+			font-size: 20px;
+		}
+	}
+	&:hover{
+		ul{
+		display: block;
+		float: left;
+		position: relative;
+		}
+		& li{
+			display: block;
+			font-size: 20px;
+			font-weight: bold;
+			padding: 2px;
+			& a{
+				display: inline-block;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.titulo{
+	position: absolute;
+}
+
+.volver{
+	position: absolute;
+	text-align: right;
+	transform: translate(-10px, 0px);
+	width: 85%;
+	vertical-align: top;
+	a{
+		color: $black;
+		text-decoration: none;
+	}
+	@media screen and (max-width: 350px){
+		display: none;
+	}
+}
