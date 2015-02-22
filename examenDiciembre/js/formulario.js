@@ -59,60 +59,43 @@ Universitario.prototype.getEdad = function() {
     }	
 /*Fin de prototype universitario*/
 
-/*Comprueba nombre*/
-		function comprobarNombre(){
-			var patronNombre = new RegExp("^([a-zA-Z]+)$");
-			var nombre = document.getElementById('nombreErroneo');
-			var valor = document.getElementById('nombre').value;
-			var bool = patronNombre.test(valor);
+/*
+Comprueba si un dato es correcto o no.
+@patron: Expresion regular
+@valor: Valor a comprobar si es correcto
+@escritura: Donde se insertara una imagen indicando si es correcto o no
+*/
 
-						if(bool === false)
-				nombre.innerHTML = ("<img src='img/mal.png' height='20px' width='20px'>");
-			else
-				nombre.innerHTML = ("<img src='img/correcto.png' height='20px' width='20px'>");
-			return bool;
+
+function comprobarDato(patron, valor, escritura){
+	var patron = new RegExp(patron);
+	var valor = valor;
+	var correcto = patron.test(valor);
+	if(!correcto)
+		escritura.innerHTML = ("<img src='img/mal.png' height='20px' width='20px'>");
+	else
+		escritura.innerHTML = ("<img src='img/correcto.png' height='20px' width='20px'>");
+	return correcto;
+}
+
+/*Comprueba nombre*/
+	function comprobarNombre(){
+		return comprobarDato("^([a-zA-Z]+)$" , document.getElementById('nombre').value, document.getElementById('nombreErroneo'));
 		}
 
-		/*Comprueba apellido*/
-		function comprobarApellido(){
-			var patronApellido = new RegExp("^([a-zA-Z]+)$");
-			var apellido = document.getElementById('apellidoErroneo');
-			var valor = document.getElementById('apellido').value;
-			var bool = patronApellido.test(valor);
-
-			if(bool === false)
-				apellido.innerHTML = ("<img src='img/mal.png' height='20px' width='20px'>");
-			else
-				apellido.innerHTML = ("<img src='img/correcto.png' height='20px' width='20px'>");
-			return bool;
+/*Comprueba apellido*/
+	function comprobarApellido(){
+		return comprobarDato("^([a-zA-Z]+)$" , document.getElementById('apellido').value,document.getElementById('apellidoErroneo'));
 		}
 
 		/*Comprueba apellido*/
 		function comprobarApellido2(){
-			var patronApellido = new RegExp("^([a-zA-Z]+)$");
-			var apellido2 = document.getElementById('apellido2Erroneo');
-			var valor = document.getElementById('apellido2').value;	
-			var bool = patronApellido.test(valor);
-
-			if(bool === false)
-				apellido2.innerHTML = ("<img src='img/mal.png' height='20px' width='20px'>");
-			else
-				apellido2.innerHTML = ("<img src='img/correcto.png' height='20px' width='20px'>");
-			return bool;
+		return comprobarDato("^([a-zA-Z]+)$" , document.getElementById('apellido2').value,document.getElementById('apellido2Erroneo'));
 		}
 
 		/*Comprueba fechas*/
 		function comprobarFecha(){
-			var patronFecha = new RegExp("(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])-[0-9]{4}");
-			var valor = document.getElementById('fecha').value;
-			var fecha = document.getElementById('fechaErroneo');
-			var bool = patronFecha.test(valor);
-
-			if(bool === false)
-				fecha.innerHTML = ("<img src='img/mal.png' height='20px' width='20px'>");
-			else
-				fecha.innerHTML = ("<img src='img/correcto.png' height='20px' width='20px'>");
-			return bool;
+		return comprobarDato("(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])-[0-9]{4}" , document.getElementById('fecha').value,document.getElementById('fechaErroneo'));
 		}
 
 		/*Comprueba condiciones*/
