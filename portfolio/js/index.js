@@ -31,4 +31,9 @@ $(function(){
 	$( "#datepicker" ).datepicker({
 	inline: false
 });
+	$("h4").click(function() {
+  		$('h3,h1').animate({
+		    color: 'rgba(255,255,255,0.6)',
+  		});
+	});
 });
