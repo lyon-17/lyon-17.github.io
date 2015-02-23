@@ -34,7 +34,7 @@ $fondo: url(../img/background.jpg);
 }
 
 section#trabajos aside{
-	@media screen and (max-width: 350px){
+	@media screen and (max-width: 400px){
 		display: none;
 	}
 }
@@ -49,9 +49,14 @@ section#trabajos aside{
 		border: 1px;
 		border-radius: 100px;
 	}
-	@media screen and (max-width: 350px){
+	@media screen and (max-width: 750px){
 		display: block;
-		height: 75%;
+		width: 98%;
+		height: 60%;
+	}
+	@media screen and (max-width: 400px){
+		display: block;
+		height: 65%;
 		width: 98%;
 	}
 }
@@ -69,7 +74,15 @@ section#trabajos aside{
 		margin: 5px;
 		transform: translate(10px,0px);
 	}
-	@media screen and (max-width: 350px){
+	@media screen and (max-width: 750px){
+		height: 35%;
+		width: 100%;
+		& img{
+			height: 120px;
+			width: 120px;
+		}
+	}
+	@media screen and (max-width: 400px){
 		height: 35%;
 		width: 100%;
 		& img{
@@ -159,11 +172,11 @@ article{
 		position: absolute;
 		width: 10%;
 		vertical-align: bottom;
-		@media screen and (max-width: 350px){
+		@media screen and (max-width: 400px){
 			width: 80%;
 		}
 	}
-	@media screen and (max-width: 350px){
+	@media screen and (max-width: 400px){
 		margin: 10px 2px 2px 10px;
 		height: 100px;
 		width: 85%;
@@ -199,16 +212,27 @@ form{
 
 label{
 	display: inline-block;
+	font-size: 24px;
+	font-weight: bold;
 	margin-left: 3px;
 	width: 100%;
 }
 
 input[type="text"]{
+	margin: 5px;
 	width: 50%;
-	@media screen and (max-width: 350px){
+	@media screen and (max-width: 400px){
 	margin: 3px;
 	width: 80%;
 	}
+}
+
+input[type="submit"]{
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 2px;
+	margin: 3px;
 }
 
 nav{
@@ -229,7 +253,10 @@ nav{
 			}
 		}
 	}
-	@media screen and (max-width: 350px){
+	@media screen and (max-width: 750px){
+		display: none;
+	}
+	@media screen and (max-width: 400px){
 		display: none;
 	}
 }
@@ -241,8 +268,11 @@ section{
 	min-height: 500px;
 	height: 100%;
 	padding: 10px 5px 5px 5px;
-	@media screen and (max-width: 350px){
-		min-height: 650px;
+	@media screen and (max-width: 750px){
+		min-height: 900px;
+	}
+	@media screen and (max-width: 400px){
+		min-height: 750px;
 	}
 	& p{
 		padding: 5px 0px;
@@ -265,10 +295,10 @@ ul{
 }
 
 textarea{
+	resize: none;
 	width: 50%;
-	@media screen and (max-width: 350px){
+	@media screen and (max-width: 400px){
 	margin: 3px;
-	resize:none;
 	width: 80%;
 	}
 }
@@ -287,7 +317,37 @@ textarea{
 
 .smallNav{
 	display: none;
-	@media screen and (max-width: 350px){
+	@media screen and (max-width: 750px){
+		display: block;
+		height: 40px;
+		position: absolute;
+		width: 95%;
+	}
+	& ul{
+		display: none;
+		width: 100%;
+		& li a{
+			font-size: 20px;
+		}
+	}
+	&:hover{
+		ul{
+		display: block;
+		float: left;
+		position: relative;
+		}
+		& li{
+			display: block;
+			font-size: 20px;
+			font-weight: bold;
+			padding: 2px;
+			& a{
+				display: inline-block;
+				text-decoration: none;
+			}
+		}
+	}
+	@media screen and (max-width: 400px){
 		display: block;
 		height: 40px;
 		position: absolute;
@@ -333,7 +393,7 @@ textarea{
 		color: $black;
 		text-decoration: none;
 	}
-	@media screen and (max-width: 350px){
+	@media screen and (max-width: 400px){
 		display: none;
 	}
 }
