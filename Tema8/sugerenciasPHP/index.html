@@ -1,0 +1,42 @@
+<!--
+HTML que carga el codigo de un archivo e intenta cargar la pagina de dicho código
+Alejandro Gutierrez Lozano
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Pagina con Ajax</title>
+		<script type="text/javascript" src="js/funciones.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+		<style type="text/css">
+		body{
+			font-family: arial;
+		}
+
+		label{
+			display: inline-block;
+			margin: 2px;
+			min-width: 120px;
+			padding: 2px;
+		}
+		#sugerencias{
+			display: inline-block;
+			margin-left: 2px;
+		}
+
+		</style>
+	</head>
+	<body>
+		<form>
+			<label>Buscar nombres:</label><br/>
+			<input type="text" id="nombres" onkeyup="showHint(this.value)">
+		</form>
+		Sugerencias:<div id="sugerencias">No hay coincidencias</div>
+		<p>
+			<a href="../index.html">Volver</a>
+		</p>
+
+	</body>
+</html>

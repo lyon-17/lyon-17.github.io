@@ -38,7 +38,9 @@ function estadoPeticion(){
 				//Si devuelve OK
 				textoDIV(document.getElementById('texto'), this.responseText);
 			}
-				//textoDIV(document.getElementById('estadoText'),this.status);
+			else{
+				textoDIV(document.getElementById('texto'),"");
+			}
 			//break;
 	}
 }
