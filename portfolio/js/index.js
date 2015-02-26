@@ -5,16 +5,16 @@ $(function(){
 
 		var configuracion ={
 			velocidad: 500,
-			colorInicial: 'rgba(75,76,77,1)',
-			colorFinal: 'rgba(115,136,117,1)'
+			colorInicial: 'rgba(0,0,255,1)',
+			colorFinal: 'rgba(255,0,0,1)'
 		}
 		jQuery.extend(configuracion,opciones);
 		this.each(function(){
 			elem = $(this);
 			elem.css('color',configuracion.colorInicial);
-			elem.fadeOut(1000, function(){
-				$(this).fadeIn(1000);
-				elem.css('color',configuracion.colorFinal);
+			elem.fadeOut(500, function(){
+				$(this).fadeIn(configuracion.velocidad);
+				$(this).css('color',configuracion.colorFinal);
 			});
 		});
 	return this;
@@ -22,23 +22,29 @@ $(function(){
 
 	$('article').mouseenter(function(event){
 		event.preventDefault();
-		$('p',this).css('background-color','rgba(43,43,41,0.9)');
-		//$('p',this).css('width','25%');
-		$('p',this).fadeIn(500);
+		$('p',this).css('background-color','red');
+		$('p',this).fadeIn(1000);
 	});
 	$('article').mouseout(function(event){
 		event.preventDefault();
-		$('p',this).css('background-color','none');
+		$('p',this).css('background-color','blue');
 		$('p',this).fadeOut(1000);
 	});
 
-	$('#tabs').tabs();
-	$('h4').cambioColor();
-	$('h1').cambioColor({
-		velocidad: 1000,
-		colorInicial: 'rgba(73,73,113,0.8)',
-		colorFinal: 'rgba(113,156,73,0.8)',
+	$('h4').delay(2000).cambioColor();
+	$('h1').delay(2000).cambioColor({
+		velocidad: 3000,
+		colorInicial: 'rgba(255,0,0,0.8)',
+		colorFinal: 'rgba(0,255,0,0.8)',
 	});
+
+	$("h4").click(function() {
+  		$('h3,h1').animate({
+		    color: 'rgba(255,255,0,0.6)',
+  		});
+	});
+
+	$('#tabs').tabs();
 
 	$( "#fechaInicio" ).datepicker({
     numberOfMonths: 1,
@@ -60,13 +66,7 @@ $(function(){
     dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
     dateFormat: 'dd/mm/yy',
     onClose: function(selectedDate) {
-      $( "#fechaIni" ).datepicker("option", "maxDate", selectedDate);
+      $( "#fechaInicio" ).datepicker("option", "maxDate", selectedDate);
     }
   });
-
-	$("h4").click(function() {
-  		$('h3,h1').animate({
-		    color: 'rgba(255,255,255,0.6)',
-  		});
-	});
 });
