@@ -4,7 +4,7 @@ $(function(){
 	jQuery.fn.cambioColor = function(opciones) {
 
 		var configuracion ={
-			velocidad: 500,
+			velocidad: 1000,
 			colorInicial: 'rgba(0,0,255,1)',
 			colorFinal: 'rgba(255,0,0,1)'
 		}
@@ -17,8 +17,22 @@ $(function(){
 				$(this).css('color',configuracion.colorFinal);
 			});
 		});
-	return this;
+		return this;
 	}; 
+
+	/*jQuery.fn.moverPagina = function(opciones) {
+
+		var configuracion ={
+			velocidad: 1000,
+			distancia: '100%'
+		}
+		jQuery.extend(configuracion,opciones);
+		this.each(function(){
+			$(this).animate({'height' : '1000px'},1000);
+			console.log('as');
+		});
+		return this;
+	};*/
 
 	$('article').mouseenter(function(event){
 		event.preventDefault();
@@ -36,6 +50,10 @@ $(function(){
 		velocidad: 3000,
 		colorInicial: 'rgba(255,0,0,0.8)',
 		colorFinal: 'rgba(0,255,0,0.8)',
+	});
+
+	$('h4').mouseenter(function(event){
+		$('h4, h1').stop();
 	});
 
 	$("h4").click(function() {

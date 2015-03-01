@@ -9,16 +9,6 @@ $foto: url(../img/foto.jpg);
 	margin: 0 auto;
 }
 
-@-webkit-keyframes arribaAbajo{
-	0%{transform: translate(100px,0px)}
-	100%{transform: translate(-100px,0px)}
-}
-
-@-webkit-keyframes abajoArriba{
-	0%{transform: translate(-100px,0px)}
-	100%{transform: translate(100px,0px)}
-}
-
 /*#Ids*/
 #contenido{
 	margin-top: 10px;
@@ -217,6 +207,7 @@ body{
 
 footer{
 	background-color: $gray;
+	margin-top: 25px;
 	text-align: center;
 	vertical-align: bottom;
 	& p{
