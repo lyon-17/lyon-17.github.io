@@ -1,0 +1,53 @@
+{ "alimentos": {
+        "Aceites": [
+            {
+                "tipo" :"Aceite de oliva virgen extra",
+                "descripcion" : "Aceite especial"
+            },
+            {
+                "tipo" : "Aceite de oliva virgen",
+                "descripcion" : "Aceite de calidad estandar"
+            },
+            {
+                "tipo" : "Aceite de oliva",
+                "descripcion" : "Aceite condicionado para freir"
+            },
+            {
+                "tipo" : "Aceite de orujo de oliva",
+                "descripcion" : "Aceite especial para salsas"
+            }
+        ],
+        "Jamones": [
+            {
+                "tipo" :"Negro",
+                "descripcion" : "Elaborado en los montes de castilla"
+            },
+            {
+                "tipo" : "Rojo",
+                "descripcion" : "Elaborado con las antiguas tecnicas"
+            },
+            {
+                "tipo" : "Verde",
+                "descripcion" : "Obtenido en los montes de la cordillera subetica"
+            },
+            {
+                "tipo" : "Blanco",
+                "descripcion" : "diseñado para embutido"
+            }
+        ],
+        "Vinos": [
+            {
+                "tipo" :"Rosados",
+                "descripcion" : "Vinos categorizados con calidad alta"
+            },
+            {
+                "tipo" : "Tintos jovenes",
+                "descripcion" : "Alta calidad con un sabor dulce"
+            },
+            {
+                "tipo" : "Tintos de crianza",
+                "descripcion" : "Vinos considerados como los mejores"
+            }
+        ]
+    }
+}
